@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web ban thiet bi am thanh truc tuyen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+        }
+        
+        /* Center the image and position the close button */
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+          position: relative;
+        }
+        
+        img.avatar {
+          width: 40%;
+          border-radius: 50%;
+        }
+        
+        .container {
+          padding: 16px;
+        }
+        
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          padding-top: 60px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 1px solid #888;
+          width: 50%; /* Could be more or less, depending on screen size */
+        }
+        
+        /* The Close Button (x) */
+        .close {
+          position: absolute;
+          right: 25px;
+          top: 0;
+          color: #000;
+          font-size: 35px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: red;
+          cursor: pointer;
+        }
+        
+        /* Add Zoom Animation */
+        .animate {
+          -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+          from {-webkit-transform: scale(0)} 
+          to {-webkit-transform: scale(1)}
+        }
+          
+        @keyframes animatezoom {
+          from {transform: scale(0)} 
+          to {transform: scale(1)}
+        }
+        
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+          span.psw {
+             display: block;
+             float: none;
+          }
+          .cancelbtn {
+             width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:35px"></i></a></li>
+                <div id="login">
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <img src="img/img_avatar2.jpg" alt="Avatar" class="avatar">
+                            </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+  </form>
+</div>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        
+        <h2>#KnowUs</h2>
+       
+        <p>Giảm giá tới 70% và có nhiều voucher hấp dẫn !</p>
+        <!-- <button>Shop Now</button> -->
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="img/about1.jpg" alt="">
+        <div>
+            <h2>Who We Are ?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id distinctio, aspernatur consequatur et quas dolorem accusamus nostrum voluptate. Dolorem obcaecati ipsa dicta unde! Officia iusto eius debitis laborum assumenda Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus qui atque amet, obcaecati saepe sequi odit temporibus odio possimus repellat aperiam error blanditiis doloremque numquam rerum officiis, illo voluptates! Similique?</p>
+            <abbr title="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</abbr>
+            
+            <br><br>
+            
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Siêu Sale Sập Sàn Từ Đây Đến Hết 1/5</marquee>
+        </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/freeship.png" alt="" srcset="">
+            <h6>Miễn phí vận chuyển</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/onl.png" alt="" srcset="">
+            <h6>Đặt hàng online</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/sale.png" alt="" srcset="">
+            <h6>Khuyến mãi</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/thanthien.png" alt="" srcset="">
+            <h6>Thân thiện</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/support.png" alt="" srcset="">
+            <h6>Hỗ trợ 24/7</h6>
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <div class="newstext">
+            <h4>Đăng Ký Để Nhận Thông Báo Mới Nhất</h4>
+            <p>Nhận thông tin mới nhất của cửa hàng qua E-mail và nhận các <span>ưu đãi</span> đặc biệt !!</p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button>Đăng Ký</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="">
+            <h4>Contact</h4>
+            <p>Address: <strong> 312 Quang Trung, quận Gò Vấp, TPHCM</strong> </p>
+            <p>Phone: <strong> 0985678123</strong> </p>
+            <p>Hours: <strong> 8:00 - 22:00, T2 - CN</strong> </p>
+            <div class="folow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook-f"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube-play"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-telegram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My account</h4>
+            <a href="#">Sig in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Orders</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="">
+        </div>
+
+        <div class="coppyright">
+            <p>Coppyright @ Danh Vu Minh Quang - 22712921 - Bai Tap Lớn</p>
+        </div>
+    </footer>
+
+    <script src="scirpt.js"></script>
+</body>
+</html>
